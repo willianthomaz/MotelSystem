@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.CorrecaoSaldoCaixaController"
+            style="-fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);">
+
+    <center>
+        <VBox alignment="CENTER" spacing="25" prefHeight="500" prefWidth="600"
+              style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 30;">
+
+            <!-- LOGO -->
+            <ImageView fitHeight="150" fitWidth="300" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo.png"/>
+                </image>
+            </ImageView>
+
+            <!-- TÍTULO -->
+            <Label text="Correção de Saldo"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #343a40;" />
+
+            <!-- SALDO CAIXA -->
+            <Label fx:id="labelSaldoCaixa"
+                   text="Saldo em caixa: R$ 0,00"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #198754;" />
+
+            <!-- CAMPO DE RETIRADA -->
+            <HBox alignment="CENTER" spacing="20">
+                <Label text="Retirada:"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #495057;" />
+                <TextField fx:id="textRetirada"
+                           prefWidth="200"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            </HBox>
+
+            <!-- RESULTADOS -->
+            <VBox alignment="CENTER" spacing="10">
+                <Label fx:id="labelSomatorio"
+                       text="Retirada: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #6c757d;" />
+                <Label fx:id="labelSaldoAtual"
+                       text="Saldo Atual: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #0d6efd;" />
+            </VBox>
+
+            <!-- BOTÕES -->
+            <HBox alignment="CENTER" spacing="30">
+                <Button fx:id="btnSair" onAction="#handleSair"
+                        text="Sair"
+                        prefHeight="45" prefWidth="130"
+                        style="-fx-background-color: #f4cccc; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+
+                <Button fx:id="btnCancelar" onAction="#handleCancelar"
+                        text="Cancelar"
+                        prefHeight="45" prefWidth="130"
+                        style="-fx-background-color: #fce5cd; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+
+                <Button fx:id="btnOk" onAction="#handleOk"
+                        text="Confirmar"
+                        prefHeight="45" prefWidth="130"
+                        style="-fx-background-color: #d9ead3; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

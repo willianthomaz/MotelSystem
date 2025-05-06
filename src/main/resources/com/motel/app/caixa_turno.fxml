@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.CaixaTurnoController"
+            style="-fx-background-color: #f0f0f0;">
+
+    <!-- Área principal central para conteúdo (pode ser preenchida depois) -->
+    <center>
+        <TextArea fx:id="textAreaCaixa" editable="false" wrapText="true"
+                  style="-fx-font-size: 14px; -fx-padding: 10px;"
+                  prefHeight="400" prefWidth="600"/>
+    </center>
+
+    <!-- Botão Sair no rodapé -->
+    <bottom>
+        <HBox alignment="CENTER" style="-fx-padding: 10;">
+            <Button fx:id="btnSair"
+                    text="Sair"
+                    onAction="#handleSair"
+                    prefWidth="200"
+                    style="-fx-background-color: #f4cccc; -fx-font-size: 16px; -fx-font-weight: bold;" />
+        </HBox>
+    </bottom>
+</BorderPane>

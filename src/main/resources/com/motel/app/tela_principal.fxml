@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="560" prefWidth="850" style="-fx-background-color: black;"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.TelaPrincipalController">
+
+    <!-- Cabeçalho -->
+    <Label layoutX="10" layoutY="10" style="-fx-text-fill: red; -fx-font-size: 24px; -fx-font-weight: bold;" text="Motel  Angel Point" />
+    <Label layoutX="10" layoutY="40" style="-fx-text-fill: yellow; -fx-font-size: 14px;" text="Operador: Abcd" />
+    <Label layoutX="620" layoutY="10" style="-fx-text-fill: red; -fx-font-size: 18px; -fx-font-weight: bold;" text="Dia da Semana,  99/99/99" />
+    <Label layoutX="700" layoutY="40" style="-fx-text-fill: orange; -fx-font-size: 24px; -fx-font-weight: bold;" text="99:99:99" />
+
+    <!-- Coluna 1 -->
+    <VBox layoutX="20" layoutY="80" spacing="5">
+        <Button fx:id="btnEntrada" onAction="#abrirTelaEntrada" prefHeight="40" prefWidth="130" text="Entrada" />
+        <Button fx:id="btnPedidos" onAction="#abrirTelaPedidos" prefHeight="40" prefWidth="130" text="Pedidos" />
+        <Button fx:id="btnSaida" onAction="#abrirTelaSaida" prefHeight="40" prefWidth="130" text="Saída" />
+        <Button fx:id="btnLiberar" onAction="#abrirTelaLiberar" prefHeight="40" prefWidth="130" text="Liberar" />
+        <Button fx:id="btnFazerLimpeza" onAction="#abrirTelaFazerLimpeza" prefHeight="40" prefWidth="130" text="Fazer Limpeza" />
+        <Button fx:id="btnManutencao" onAction="#abrirTelaManutencao" prefHeight="40" prefWidth="130" text="Manutenção" />
+        <Button fx:id="btnPgtoAntecipado" onAction="#abrirTelaPgtoAntecipado" prefHeight="40" prefWidth="130" text="Pgto Antecipado" />
+    </VBox>
+
+    <!-- Coluna 2 -->
+    <VBox layoutX="170" layoutY="80" spacing="5">
+        <Button fx:id="btnCancelaEntrada" onAction="#abrirTelaCancelaEntrada" prefHeight="40" prefWidth="130" text="Cancel Entrada" />
+        <Button fx:id="btnCancelaSaida" onAction="#abrirTelaCancelaSaida" prefHeight="40" prefWidth="130" text="Cancel Saída" />
+        <Button fx:id="btnReposicao" onAction="#abrirTelaReposicao" prefHeight="40" prefWidth="130" text="Reposição" />
+        <Button fx:id="btnFechaTurno" onAction="#abrirTelaFechaTurno" prefHeight="40" prefWidth="130" text="Fecha Turno" />
+        <Button fx:id="btnDespertador" onAction="#abrirTelaDespertador" prefHeight="40" prefWidth="130" text="Despertador" />
+        <Button fx:id="btnOrganizaArquivos" onAction="#abrirTelaOrganizaArquivos" prefHeight="40" prefWidth="130" text="Org. Arquivos" />
+    </VBox>
+
+    <!-- Coluna 3 -->
+    <VBox layoutX="330" layoutY="80" spacing="5">
+        <Button fx:id="btnProdutosBar" onAction="#abrirTelaProdutosBar" prefHeight="40" prefWidth="130" text="Produtos Bar" />
+        <Button fx:id="btnTipoApto" onAction="#abrirTelaTipoApto" prefHeight="40" prefWidth="130" text="Tipo de Aptos" />
+        <Button fx:id="btnTabelaPrecos" onAction="#abrirTelaTabelaPrecos" prefHeight="40" prefWidth="130" text="Tabela Preços" />
+        <Button fx:id="btnCorrecaoCaixa" onAction="#abrirTelaCorrecaoCaixa" prefHeight="40" prefWidth="130" text="Correcção Cx" />
+        <Button fx:id="btnCaixaDia" onAction="#abrirTelaCaixaDia" prefHeight="40" prefWidth="130" text="Caixa do Dia" />
+        <Button fx:id="btnFechaDia" onAction="#abrirTelaFechaDia" prefHeight="40" prefWidth="130" text="Fecha Dia" />
+        <Button fx:id="btnSair" onAction="#sairAplicacao" prefHeight="40" prefWidth="130" style="-fx-background-color: orange; -fx-font-weight: bold;" text="Sair" />
+    </VBox>
+
+    <!-- Coluna 4 -->
+    <VBox layoutX="500" layoutY="80" spacing="5">
+        <Button fx:id="btnPessoal" onAction="#abrirTelaCadastroPessoas" prefHeight="40" prefWidth="130" text="Pessoal" />
+    </VBox>
+
+    <!-- Coluna 5 (vermelha) -->
+    <VBox layoutX="650" layoutY="80" spacing="5">
+        <Button fx:id="btnSituacao" onAction="#abrirTelaSituacao" prefHeight="40" prefWidth="130" style="-fx-background-color: orange; -fx-font-weight: bold;" text="Situação" />
+        <Button fx:id="btnCaixaTurno" onAction="#abrirTelaCaixaTurno" prefHeight="40" prefWidth="130" style="-fx-background-color: red; -fx-text-fill: white;" text="Caixa Turno" />
+        <Button fx:id="btnProdutosBar2" onAction="#abrirTelaProdutosBar" prefHeight="40" prefWidth="130" style="-fx-background-color: red; -fx-text-fill: white;" text="Produtos Bar" />
+        <Button fx:id="btnOperador" onAction="#abrirTelaOperador" prefHeight="40" prefWidth="130" style="-fx-background-color: red; -fx-text-fill: white;" text="Operador" />
+        <Button fx:id="btnPrecos" onAction="#abrirTelaTabelaPrecos" prefHeight="40" prefWidth="130" style="-fx-background-color: red; -fx-text-fill: white;" text="Preços" />
+        <Button fx:id="btnLog" onAction="#abrirTelaLogSistema" prefHeight="40" prefWidth="130" style="-fx-background-color: red; -fx-text-fill: white;" text="Log" />
+    </VBox>
+
+</AnchorPane>

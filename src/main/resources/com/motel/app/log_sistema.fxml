@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.LogSistemaController"
+            style="-fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);">
+
+    <center>
+        <VBox alignment="CENTER" spacing="25" prefHeight="600" prefWidth="800"
+              style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 30;">
+
+            <!-- LOGO -->
+            <ImageView fitHeight="120" fitWidth="300" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo.png" />
+                </image>
+            </ImageView>
+
+            <!-- TÍTULO -->
+            <Label text="Log do Sistema"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #343a40;" />
+
+            <!-- COMBOS -->
+            <HBox spacing="30" alignment="CENTER">
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Seleção de Operador:"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                    <ComboBox fx:id="cboNOOper" prefWidth="200" />
+                </VBox>
+
+                <VBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="Seleção de Operação:"
+                           style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                    <ComboBox fx:id="cboOper" prefWidth="200" />
+                </VBox>
+
+                <Button fx:id="btnRelatorio"
+                        onAction="#handleRelatorio"
+                        text="Relatório"
+                        prefWidth="120" prefHeight="40"
+                        style="-fx-background-color: #d0e0f0; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+            </HBox>
+
+            <!-- ÁREA DE TEXTO -->
+            <TextArea fx:id="logArea" editable="false" wrapText="true"
+                      prefHeight="300" prefWidth="700"
+                      style="-fx-font-size: 14px; -fx-control-inner-background: #ffffff;" />
+
+            <!-- BOTÃO SAIR -->
+            <HBox alignment="CENTER">
+                <Button fx:id="btnSair"
+                        onAction="#handleSair"
+                        text="Sair"
+                        prefHeight="45" prefWidth="150"
+                        style="-fx-background-color: #f4cccc; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" />
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>

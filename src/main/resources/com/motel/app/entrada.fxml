@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.EntradaController"
+            style="-fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" prefHeight="600" prefWidth="650"
+              style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 30;">
+
+            <!-- LOGO -->
+            <ImageView fitHeight="120" fitWidth="250" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo.png"/>
+                </image>
+            </ImageView>
+
+            <!-- TÍTULO -->
+            <Label text="Entrada"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #b02a37;" />
+
+            <!-- CAMPOS -->
+            <GridPane hgap="20" vgap="15">
+                <Label text="Nº Apto:" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <ComboBox fx:id="comboApto" prefWidth="180" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                <Label text="Hora:" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <TextField fx:id="txtHora" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                <Label text="Data:" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <TextField fx:id="txtData" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                <Label text="Valor Antec.:" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+                <TextField fx:id="txtValor" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+            </GridPane>
+
+            <!-- RADIO GRUPOS -->
+            <HBox spacing="30" alignment="CENTER">
+                <!-- Tabela -->
+                <VBox spacing="5">
+                    <Label text="Tabela" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #b02a37;" />
+                    <RadioButton fx:id="radioNormal" text="Normal" />
+                    <RadioButton fx:id="radioEspecial" text="Especial" />
+                </VBox>
+
+                <!-- Pessoas -->
+                <VBox spacing="5">
+                    <Label text="Pessoas" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #b02a37;" />
+                    <RadioButton fx:id="radio2p" text="2p" />
+                    <RadioButton fx:id="radio3p" text="3p" />
+                    <RadioButton fx:id="radio4p" text="4p" />
+                </VBox>
+
+                <!-- Imprimir -->
+                <VBox spacing="5">
+                    <Label text="Imprimir Ticket" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #b02a37;" />
+                    <RadioButton fx:id="radioSim" text="Sim" />
+                    <RadioButton fx:id="radioNao" text="Não" />
+                </VBox>
+            </HBox>
+
+            <!-- MENSAGEM -->
+            <Label fx:id="labelMensagem" text=""
+                   style="-fx-font-size: 16px; -fx-text-fill: #6c757d; -fx-padding: 10;" />
+
+            <!-- BOTÕES -->
+            <HBox spacing="30" alignment="CENTER">
+                <Button fx:id="btnSair" onAction="#handleSair" text="Sair"
+                        style="-fx-background-color: #f4cccc; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        prefWidth="120" prefHeight="40"/>
+
+                <Button fx:id="btnCancelar" onAction="#handleCancelar" text="Cancela"
+                        style="-fx-background-color: #fce5cd; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        prefWidth="120" prefHeight="40"/>
+
+                <Button fx:id="btnOk" onAction="#handleOk" text="Ok"
+                        style="-fx-background-color: #d9ead3; -fx-font-weight: bold; -fx-background-radius: 10;"
+                        prefWidth="120" prefHeight="40"/>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

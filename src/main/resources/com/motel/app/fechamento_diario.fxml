@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.FechamentoDiarioController"
+            style="-fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);">
+
+    <center>
+        <VBox alignment="CENTER" spacing="20" prefHeight="600" prefWidth="600"
+              style="-fx-background-radius: 12; -fx-border-radius: 12; -fx-padding: 30;">
+
+            <!-- LOGO -->
+            <ImageView fitHeight="120" fitWidth="240" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo.png"/>
+                </image>
+            </ImageView>
+
+            <!-- TÍTULO -->
+            <Label text="Fechamento Diário"
+                   style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #dc3545;"/>
+
+            <!-- Labels Financeiros -->
+            <VBox spacing="10" alignment="CENTER_LEFT">
+                <Label fx:id="labelSaldoInicial" text="Saldo Inicial do Cx: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label fx:id="labelTotalEstadias" text="Total das Estadias: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label fx:id="labelTotalPedidos" text="Total dos Pedidos: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label fx:id="labelRetiradas" text="Retiradas de Cx: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+                <Label fx:id="labelSaldoAtual" text="Saldo Atual do Cx: R$ 0,00"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+            </VBox>
+
+            <!-- Tabela de Camareiras -->
+            <TableView fx:id="tabelaCamareiras" prefHeight="200" style="
+                -fx-background-color: white;
+                -fx-border-color: #dee2e6;
+                -fx-border-radius: 8;
+                -fx-background-radius: 8;
+                -fx-font-size: 14px;
+                -fx-font-weight: bold;
+                -fx-text-fill: #343a40;">
+
+                <columns>
+                    <TableColumn fx:id="colCamareira" text="Camareira" prefWidth="120"/>
+                    <TableColumn fx:id="colA" text="A" prefWidth="50"/>
+                    <TableColumn fx:id="colB" text="B" prefWidth="50"/>
+                    <TableColumn fx:id="colC" text="C" prefWidth="50"/>
+                    <TableColumn fx:id="colD" text="D" prefWidth="50"/>
+                    <TableColumn fx:id="colE" text="E" prefWidth="50"/>
+                    <TableColumn fx:id="colQtd" text="Qtd" prefWidth="60"/>
+                    <TableColumn fx:id="colTpMed" text="Tp.Med." prefWidth="80"/>
+                </columns>
+            </TableView>
+
+
+            <!-- RadioButtons -->
+            <HBox alignment="CENTER" spacing="80">
+                <VBox alignment="CENTER_LEFT" spacing="5">
+                    <Label text="Listar Movimento" style="-fx-font-weight: bold;"/>
+                    <RadioButton fx:id="radioMovimentoSim" text="Sim"/>
+                    <RadioButton fx:id="radioMovimentoNao" text="Não"/>
+                </VBox>
+
+                <VBox alignment="CENTER_LEFT" spacing="5">
+                    <Label text="Fechar Período" style="-fx-font-weight: bold;"/>
+                    <RadioButton fx:id="radioFecharSim" text="Sim"/>
+                    <RadioButton fx:id="radioFecharNao" text="Não"/>
+                </VBox>
+            </HBox>
+
+            <!-- Botões -->
+            <HBox alignment="CENTER" spacing="30">
+                <Button fx:id="btnSair" onAction="#handleSair"
+                        text="Sair"
+                        prefHeight="45" prefWidth="130"
+                        style="-fx-background-color: #f4cccc; -fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                <Button fx:id="btnOk" onAction="#handleOk"
+                        text="Ok"
+                        prefHeight="45" prefWidth="130"
+                        style="-fx-background-color: #d9ead3; -fx-font-weight: bold; -fx-font-size: 16px;"/>
+            </HBox>
+
+        </VBox>
+    </center>
+</BorderPane>
