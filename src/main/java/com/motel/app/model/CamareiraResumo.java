@@ -1,5 +1,7 @@
 package com.motel.app.model;
 
+import java.util.Objects;
+
 public class CamareiraResumo {
     private String nome;
     private int tipoA;
@@ -29,4 +31,38 @@ public class CamareiraResumo {
     public int getTipoE() { return tipoE; }
     public int getQuantidade() { return quantidade; }
     public double getTempoMedio() { return tempoMedio; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof CamareiraResumo)) return false;
+        CamareiraResumo that = (CamareiraResumo) o;
+        return tipoA == that.tipoA &&
+                tipoB == that.tipoB &&
+                tipoC == that.tipoC &&
+                tipoD == that.tipoD &&
+                tipoE == that.tipoE &&
+                quantidade == that.quantidade &&
+                Double.compare(that.tempoMedio, tempoMedio) == 0 &&
+                Objects.equals(nome, that.nome);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, tipoA, tipoB, tipoC, tipoD, tipoE, quantidade, tempoMedio);
+    }
+
+    @Override
+    public String toString() {
+        return "CamareiraResumo{" +
+                "nome='" + nome + '\'' +
+                ", tipoA=" + tipoA +
+                ", tipoB=" + tipoB +
+                ", tipoC=" + tipoC +
+                ", tipoD=" + tipoD +
+                ", tipoE=" + tipoE +
+                ", quantidade=" + quantidade +
+                ", tempoMedio=" + tempoMedio +
+                '}';
+    }
 }
