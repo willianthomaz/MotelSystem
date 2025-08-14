@@ -5,11 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import org.kordamp.ikonli.javafx.FontIcon;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CancelaEntradaController {
 
     @FXML private ComboBox<String> cboApto;
     @FXML private Button btnOk, btnCancela, btnSair;
+
+    private static final Logger logger = LoggerFactory.getLogger(CancelaEntradaController.class);
 
     @FXML
     public void initialize() {
@@ -17,11 +21,11 @@ public class CancelaEntradaController {
     }
 
     @FXML private void onOkClick() {
-        System.out.println("OK clicado");
+        logger.debug("OK clicado");
     }
 
     @FXML private void onCancelaClick() {
-        System.out.println("Cancelado");
+        logger.debug("Cancelado");
     }
 
     @FXML private void onSairClick() {

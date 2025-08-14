@@ -4,9 +4,12 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class FazerLimpezaController {
 
+    private static final Logger logger = LoggerFactory.getLogger(FazerLimpezaController.class);
     @FXML
     private ComboBox<String> comboApto;
 
@@ -28,7 +31,7 @@ public class FazerLimpezaController {
     @FXML
     private void onSairClick(ActionEvent event) {
         // Ação de sair
-        System.out.println("Saindo da tela de limpeza...");
+        logger.info("Saindo da tela de limpeza...");
         // Aqui você pode fechar a janela, por exemplo
         btnSair.getScene().getWindow().hide();
     }
@@ -43,10 +46,10 @@ public class FazerLimpezaController {
     private void onOkClick(ActionEvent event) {
         String aptoSelecionado = comboApto.getValue();
         if (aptoSelecionado != null) {
-            System.out.println("Iniciando limpeza no apto " + aptoSelecionado);
+            logger.info("Iniciando limpeza no apto {}", aptoSelecionado);
             // Chamar lógica de iniciar limpeza...
         } else {
-            System.out.println("Nenhum apartamento selecionado.");
+            logger.warn("Nenhum apartamento selecionado.");
         }
     }
 }

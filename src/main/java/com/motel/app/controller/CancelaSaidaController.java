@@ -6,10 +6,14 @@ import javafx.scene.control.ComboBox;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.motel.app.database.AccessConnectionFactory;
 
 public class CancelaSaidaController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CancelaSaidaController.class);
 
     @FXML
     private ComboBox<String> cboApto;
@@ -36,7 +40,7 @@ public class CancelaSaidaController {
 
     @FXML
     private void onOkClick() {
-        System.out.println("Selecionado: " + cboApto.getValue());
+        logger.debug("Selecionado: {}", cboApto.getValue());
     }
 
     @FXML

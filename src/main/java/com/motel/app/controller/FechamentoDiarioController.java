@@ -8,11 +8,15 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 public class FechamentoDiarioController implements Initializable {
+
+    private static final Logger logger = LoggerFactory.getLogger(FechamentoDiarioController.class);
 
     @FXML private Label labelSaldoInicial;
     @FXML private Label labelTotalEstadias;
@@ -82,7 +86,7 @@ public class FechamentoDiarioController implements Initializable {
     private void handleOk() {
         boolean listarMovimento = radioMovimentoSim.isSelected();
         boolean fecharPeriodo = radioFecharSim.isSelected();
-        System.out.println("Listar Movimento: " + listarMovimento);
-        System.out.println("Fechar Período: " + fecharPeriodo);
+        logger.debug("Listar Movimento: {}", listarMovimento);
+        logger.debug("Fechar Período: {}", fecharPeriodo);
     }
 }
