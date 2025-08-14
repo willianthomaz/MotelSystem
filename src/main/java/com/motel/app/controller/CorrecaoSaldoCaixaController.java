@@ -7,6 +7,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.text.DecimalFormat;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CorrecaoSaldoCaixaController {
 
@@ -53,10 +55,12 @@ public class CorrecaoSaldoCaixaController {
         labelSaldoAtual.setText("Saldo Atual: R$ " + df.format(novoSaldo));
     }
 
+    private static final Logger logger = LoggerFactory.getLogger(CorrecaoSaldoCaixaController.class);
+
     @FXML
     private void handleOk() {
         // Aqui você pode adicionar lógica de persistência no banco
-        System.out.println("Saldo corrigido.");
+        logger.info("Saldo corrigido.");
         fecharJanela();
     }
 

@@ -6,6 +6,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CadastroPessoasController {
 
@@ -38,10 +40,12 @@ public class CadastroPessoasController {
 
     private final PessoaDAO pessoaDAO = new PessoaDAOImpl();
 
+    private static final Logger logger = LoggerFactory.getLogger(CadastroPessoasController.class);
+
     @FXML
     private void onSairClick() {
         // lógica para fechar a tela
-        System.out.println("Saindo...");
+        logger.info("Saindo...");
     }
 
     @FXML

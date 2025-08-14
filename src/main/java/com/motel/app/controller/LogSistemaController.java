@@ -8,8 +8,12 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LogSistemaController {
+
+    private static final Logger logger = LoggerFactory.getLogger(LogSistemaController.class);
 
     @FXML
     private ComboBox<String> cboOperador;
@@ -56,13 +60,13 @@ public class LogSistemaController {
     @FXML
     public void handleRelatorio() {
         // Lógica de geração de relatório
-        System.out.println("Gerar relatório..." );
+        logger.info("Gerar relatório...");
     }
 
     @FXML
     public void handleSair() {
         // Lógica de encerramento da tela
-        System.out.println("Fechar tela Log do Sistema...");
+        logger.info("Fechar tela Log do Sistema...");
     }
 
     // Classe auxiliar para representar os dados do log
