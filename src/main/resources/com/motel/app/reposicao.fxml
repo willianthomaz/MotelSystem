@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.motel.app.controller.ReposicaoController"
+            style="-fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);">
+    <center>
+        <VBox alignment="CENTER" spacing="20" prefWidth="600" prefHeight="400" style="-fx-padding: 30;">
+            <ImageView fitHeight="150" fitWidth="300" preserveRatio="true">
+                <image>
+                    <Image url="@/img/logo.png" />
+                </image>
+            </ImageView>
+            <Label text="Reposição de Bar"
+                   style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #dc3545;" />
+            <HBox alignment="CENTER" spacing="10">
+                <Label text="Produto:"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #495057;" />
+                <TextField fx:id="txtProduto" prefWidth="200" />
+                <Label text="Quantidade:"
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #495057;" />
+                <TextField fx:id="txtQuantidade" prefWidth="80" />
+                <Button text="Adicionar" onAction="#adicionarItem" />
+            </HBox>
+            <TableView fx:id="tabelaItens" prefHeight="200" prefWidth="500">
+                <columns>
+                    <TableColumn fx:id="colProduto" text="Produto" prefWidth="300" />
+                    <TableColumn fx:id="colQuantidade" text="Quantidade" prefWidth="200" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+</BorderPane>
