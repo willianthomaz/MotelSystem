@@ -1,20 +1,13 @@
 package com.motel.app.database;
 
-import java.io.File;
-import java.net.URL;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class AccessDBExample {
     public static void main(String[] args) {
-        URL resource = AccessDBExample.class.getClassLoader().getResource("db/controle.mdb");
-        if (resource == null) {
-            System.err.println("Database file not found.");
-            return;
-        }
-        String dbPath = new File(resource.getFile()).getAbsolutePath();
-        String url = "jdbc:ucanaccess://" + dbPath;
-
-        try (Connection conn = DriverManager.getConnection(url)) {
+        try (Connection conn = AccessConnectionFactory.getConnection()) {
             System.out.println("Conectado com sucesso!");
 
             String query = "SELECT * FROM APTO";

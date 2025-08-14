@@ -4,9 +4,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import com.motel.app.database.AccessConnectionFactory;
 
 public class CancelaSaidaController {
 
@@ -19,10 +20,7 @@ public class CancelaSaidaController {
     }
 
     private void carregarAptosDoBanco() {
-        String dbPath = "src/main/resources/db/controle.mdb"; // ajuste se necessário
-        String url = "jdbc:ucanaccess://" + dbPath;
-
-        try (Connection conn = DriverManager.getConnection(url);
+        try (Connection conn = AccessConnectionFactory.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery("SELECT Numero FROM APTO")) {
 
