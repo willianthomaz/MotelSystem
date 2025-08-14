@@ -1,5 +1,7 @@
 package com.motel.app.controller;
 
+import com.motel.app.database.PessoaDAO;
+import com.motel.app.database.PessoaDAOImpl;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -34,6 +36,8 @@ public class CadastroPessoasController {
     @FXML
     private Button btnIncluir;
 
+    private final PessoaDAO pessoaDAO = new PessoaDAOImpl();
+
     @FXML
     private void onSairClick() {
         // lógica para fechar a tela
@@ -47,20 +51,20 @@ public class CadastroPessoasController {
 
     @FXML
     private void onExcluirClick() {
-        // lógica para excluir funcionário
-        System.out.println("Excluindo funcionário...");
+        pessoaDAO.excluir(txtUsuario.getText());
+        limparCampos();
     }
 
     @FXML
     private void onAlterarClick() {
-        // lógica para alterar dados do funcionário
-        System.out.println("Alterando funcionário...");
+        pessoaDAO.alterar(txtUsuario.getText(), txtNomeCompleto.getText(), txtCargo.getText(), txtSenha.getText());
+        limparCampos();
     }
 
     @FXML
     private void onIncluirClick() {
-        // lógica para incluir novo funcionário
-        System.out.println("Incluindo novo funcionário...");
+        pessoaDAO.inserir(txtUsuario.getText(), txtNomeCompleto.getText(), txtCargo.getText(), txtSenha.getText());
+        limparCampos();
     }
 
     private void limparCampos() {
