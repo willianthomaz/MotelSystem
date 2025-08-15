@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane style="-fx-background-color: linear-gradient(to bottom, #f8f9fa, #e9ecef);" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.motel.app.controller.PedidoController">
+
+    <!-- TOPO -->
+    <top>
+        <HBox alignment="CENTER_LEFT" prefHeight="235.0" prefWidth="890.0" spacing="20" style="-fx-padding: 24 28; -fx-background-color: transparent;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox spacing="6" />
+                <Pane HBox.hgrow="ALWAYS">
+               <children>
+         
+                     <!-- LOGO -->
+                     <ImageView fitHeight="150" fitWidth="300.0" layoutX="308.0" layoutY="1.0" preserveRatio="true">
+                         <image>
+                             <Image url="@/img/logo.png" />
+                         </image>
+                     </ImageView>
+                     
+                     <!-- Título -->
+                     <Label alignment="CENTER" layoutX="338.0" layoutY="151.0" style="-fx-text-fill: #ff3b30; -fx-font-size: 24px; -fx-font-weight: bold;" text="Pedidos" />
+               </children></Pane>
+            </children>
+        </HBox>
+    </top>
+
+    <!-- CONTEÚDO -->
+    <center>
+        <VBox spacing="18" style="-fx-padding: 0 28 28 28;">
+
+            <!-- Linha: Apto -->
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <Label style="-fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold;" text="N. Apto:" />
+                <ComboBox fx:id="cboApto" prefWidth="260" style="-fx-font-weight: bold; -fx-background-radius: 8; -fx-border-radius: 8;" />
+                <!-- Preço (só p/ Ped Casa) -->
+                <Pane HBox.hgrow="ALWAYS" />
+                <Label fx:id="lblPrecoCasa" style="-fx-text-fill: black; -fx-font-size: 14px; -fx-font-weight: bold;" text="Preço (Ped. Casa):" />
+                <TextField fx:id="txtPreco" prefWidth="120" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-font-weight: bold;" />
+            </HBox>
+
+            <!-- Linha: Produto + Qtd -->
+            <HBox alignment="CENTER_LEFT" spacing="12">
+                <Label style="-fx-text-fill: black; -fx-font-size: 14px; -fx-font-weight: bold;" text="Cod  Descrição:" />
+                <ComboBox fx:id="cboCod" prefWidth="520" style="-fx-font-weight: bold; -fx-background-radius: 8; -fx-border-radius: 8;" />
+                <Label style="-fx-text-fill: black; -fx-font-size: 14px; -fx-font-weight: bold;" text="Qtde:" />
+                <TextField fx:id="txtQtd" prefWidth="80" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-font-weight: bold;" />
+            </HBox>
+
+            <!-- Duas colunas: Lista atual x Pedidos Anteriores -->
+            <HBox alignment="TOP_LEFT" spacing="18">
+                <!-- Coluna esquerda -->
+                <VBox spacing="8" VBox.vgrow="ALWAYS">
+                    <Label style="-fx-text-fill: black; -fx-font-family: 'Consolas'; -fx-font-size: 12px;" text="Cod   Descrição                               Qtd      Preço" />
+                    <ListView fx:id="lstPedidos" prefHeight="280" style="-fx-control-inner-background: #111; -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #333;" VBox.vgrow="ALWAYS" />
+                    <HBox alignment="CENTER_LEFT" spacing="12">
+                        <Label style="-fx-text-fill: black; -fx-font-size: 14px; -fx-font-weight: bold;" text="Valor Total Pedido Casa:" />
+                        <TextField fx:id="txtValorTotalCasa" prefWidth="160" style="-fx-background-radius: 8; -fx-border-radius: 8; -fx-font-weight: bold;" />
+                    </HBox>
+                </VBox>
+
+                <!-- Coluna direita -->
+                <VBox spacing="8" VBox.vgrow="ALWAYS">
+                    <Label style="-fx-text-fill: black; -fx-font-size: 14px; -fx-font-weight: bold;" text="Ped. Anterior" />
+                    <ListView fx:id="lstPAnterior" prefHeight="320" prefWidth="420" style="-fx-control-inner-background: #111; -fx-text-fill: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #333;" VBox.vgrow="ALWAYS" />
+                </VBox>
+            </HBox>
+
+            <!-- Rodapé com opções e botões -->
+            <HBox alignment="CENTER_LEFT" spacing="18">
+                <!-- Imprimir Ticket -->
+                <TitledPane expanded="true" prefWidth="220" style="-fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius: 12; -fx-border-radius: 12;" text="Imprimir Ticket">
+
+                    <content>
+                        <VBox spacing="8" style="-fx-padding: 10;">
+                            <RadioButton fx:id="optTicketSim" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Sim" />
+
+                            <RadioButton fx:id="optTicketNao" selected="true" style="-fx-text-fill: black; -fx-font-weight: bold;" text="Não" />
+                        </VBox>
+                    </content>
+                </TitledPane>
+
+                <Pane HBox.hgrow="ALWAYS" />
+
+                <!-- Botões -->
+                <HBox alignment="CENTER_RIGHT" spacing="16">
+                    <Button fx:id="btnSair" prefHeight="46" prefWidth="140" style="-fx-background-color: #f4cccc; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" text="Sair" />
+                    <Button fx:id="btnCancela" prefHeight="46" prefWidth="140" style="-fx-background-color: #fce5cd; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" text="Cancela" />
+                    <Button fx:id="btnOk" prefHeight="46" prefWidth="140" style="-fx-background-color: #d9ead3; -fx-text-fill: black; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" text="Ok" />
+                </HBox>
+            </HBox>
+        </VBox>
+    </center>
+</BorderPane>

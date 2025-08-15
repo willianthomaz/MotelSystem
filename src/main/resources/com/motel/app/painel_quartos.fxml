@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="1024.0" prefWidth="1810.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.motel.app.controller.PainelQuartosController">
+
+    <!-- ======= Cabeçalho ======= -->
+    <Label layoutX="58.0" layoutY="30.0" style="-fx-text-fill: #ff3b30; -fx-font-weight: bold; -fx-font-size: 32px;" text="Motel  Angel Point" />
+    <Label layoutX="58.0" layoutY="70.0" style="-fx-text-fill: #ffd60a; -fx-font-size: 16px; -fx-font-weight: bold;" text="Operador: Abcd" />
+    <Label layoutX="1440.0" layoutY="30.0" style="-fx-text-fill: #ff3b30; -fx-font-weight: bold; -fx-font-size: 20px;" text="Dia da Semana,  99/99/99" />
+    <Label layoutX="1539.0" layoutY="60.0" style="-fx-text-fill: #ff9f0a; -fx-font-weight: bold; -fx-font-size: 36px;" text="99:99:99" />
+
+    <!-- ======= estilo utilitário (aplicado em cada botão via style) ======= -->
+    <!-- card verde (livre) -->
+    <!-- Para trocar cor conforme status, altere -fx-background-color -->
+    <!-- Tamanho padrão: 96 x 56 para quartos / 240 x 90 para cartões grandes -->
+
+    <!-- ======= Fileira superior (larga, de ponta a ponta) ======= -->
+    <HBox layoutX="58.0" layoutY="123.0" spacing="5.0">
+        <children>
+            <!-- 16 cards como no topo da foto: ajuste textos livremente -->
+            <Button prefHeight="110.0" prefWidth="120.0" style="-fx-background-color: #2ecc71; -fx-text-fill: black; -fx-font-weight: bold; -fx-background-radius:10; -fx-border-color: #1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="     59 S&#10;MAXIMUS&#10;    04:58&#10;    BPRR" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill: black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="    57 S&#10;PALACE&#10;  10:02 &#10;     BR" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill: black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="    55 S&#10;PALACE&#10;  10:12 &#10;    BR" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill: black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="    53&#10;PALACE&#10;08:17 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="    51&#10;PALACE&#10;13:24 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="49\nPALACE\n08:57 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="47\nPALACE\n13:42 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="45\nPALACE\n09:51 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="43\nPALACE\n09:28 BQ" />
+            <!-- Exemplo de ocupado (vermelho) -->
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #e74c3c; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#7f1d1d; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="     41&#10;PALACE&#10;  16:08 &#10;   03 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="39\nPALACE\n13:43 BQ" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="37\nPALACE\n20:01 BQ" />
+            <Button prefHeight="110.0" prefWidth="115.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="35\nPALACE\n16:59 BR" />
+            <Button prefHeight="110.0" prefWidth="100.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="33\nPALACE\n12:18 BR" />
+            <Button prefHeight="110.0" prefWidth="120.0" style="-fx-background-color: #2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="31\nMAXIMUS\n17:13 BPQR" />
+        </children>
+    </HBox>
+
+    <!-- ======= Coluna esquerda (vertical) ======= -->
+    <VBox layoutX="58.0" layoutY="242.0" spacing="5.0">
+        <children>
+            <Button prefHeight="110.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="  61 S&#10;ROMA&#10; 09:38 &#10;   PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="   63 S&#10; ROMA&#10;11:46 PQ" />
+         <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="  65 S&#10;ROMA&#10;09:38 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="67\nROMA\n17:21 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="69\nROMA\n04:30 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="71\nROMA\n10:40 PQ" />
+            <Button prefHeight="100.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="73\nIMPERIAL\n08:45 BPR" />
+        </children>
+    </VBox>
+
+    <!-- ======= Coluna direita (vertical) ======= -->
+    <VBox layoutX="1563.0" layoutY="245.0" spacing="5.0">
+        <children>
+            <Button prefHeight="110.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="29\nMAXIMUS\n05:06 BPRR" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="27\nROMA\n02:47 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="25\nROMA\n12:53 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="23\nROMA\n16:39 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="21\nROMA\n10:51 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="19\nROMA\n14:29 PQ" />
+            <Button prefHeight="75.0" prefWidth="120.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="17\nROMA\n12:53 PQ" />
+        </children>
+    </VBox>
+
+    <!-- ======= Faixa 2 (linha mais alta central, com muitos cards) ======= -->
+    <HBox layoutX="277.0" layoutY="367.0" spacing="5.0">
+        <children>
+            <!-- ajuste os textos conforme sua base -->
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="      56&#10;PASSIONE&#10;10:48 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="      54&#10;PASSIONE&#10;08:15 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="52\nASSIO\n17:46 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="50\nASSIO\n04:16 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="48\nASSIO\n10:34 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="46\nASSIO\n14:04 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="44\nASSIO\n16:42 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="42\nASSIO\n15:42 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="40\nASSIO\n14:01 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="38\nASSIO\n17:29 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="36\nASSIO\nXXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="34\nASSIO\nXXR" />
+        </children>
+    </HBox>
+
+    <!-- ======= Faixa 3 (logo abaixo da faixa 2, com mesmo alinhamento) ======= -->
+    <HBox layoutX="520" layoutY="315" spacing="12" />
+
+    <!-- ======= Faixa 4 (ainda abaixo; termina antes para abrir espaço aos cartões) ======= -->
+    <HBox layoutX="277.0" layoutY="485.0" spacing="5.0">
+        <children>
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="      76&#10;PASSIONE&#10;11:55 XXR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="78\nXXR\n14:03" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="80\nXXR\n11:02" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="82\nXXR\n16:33" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="84\nXXR\n09:58" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="86\nXXR\n05:27" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="88\nXXR\n11:56" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="90\nXXR\n11:24" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="02\nXXR\n14:42" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="04\nXXR\n11:45" />
+         <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="06\nXXR\n11:45" />
+         <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="08\nXXR\n11:45" />
+         <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="10\nXXR\n11:45" />
+        </children>
+    </HBox>
+
+    <!-- ======= Cartões grandes (Sair e Motivo) ======= -->
+    <Button layoutX="356.0" layoutY="693.0" prefHeight="110.0" prefWidth="410.0" style="-fx-background-color:#f4c2c2; -fx-text-fill:#111; -fx-font-weight:bold; -fx-font-size:25; -fx-background-radius:16; -fx-border-color:#c79292; -fx-border-radius:16; -fx-border-width:2;" text="Sair" />
+    <Button layoutX="917.0" layoutY="693.0" prefHeight="110.0" prefWidth="300.0" style="-fx-background-color:#cae9ff; -fx-text-fill:#111; -fx-font-weight:bold; -fx-font-size:25; -fx-background-radius:16; -fx-border-color:#9bbad1; -fx-border-radius:16; -fx-border-width:2;" text="Motivo Manutenção" />
+
+    <!-- ======= Faixa inferior (fileira longa) ======= -->
+    <HBox layoutX="848.0" layoutY="842.0" spacing="5.0">
+        <children>
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="01\nROMA\n18:02 PQ" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#f7c948; -fx-text-fill:#111; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#b58900; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="03\nALAC\n11:52 BR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#f7c948; -fx-text-fill:#111; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#b58900; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="     05&#10;PALACE&#10;  16:30&#10;   02 BR" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#f7c948; -fx-text-fill:#111; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#b58900; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="07\nALAC\n16:53 PQ" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#e74c3c; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#7f1d1d; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="09\nALAC\n16:38 PQ" />
+            <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#1e90ff; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#0b4a84; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="     11&#10;PALACE&#10;  16:32&#10;   23 BR" />
+            <Button prefHeight="110.0" prefWidth="145.0" style="-fx-background-color:#1e90ff; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#0b4a84; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="    13&#10;  EROS&#10;  09:59 &#10;  06 BQPR" />
+            <Button prefHeight="110.0" prefWidth="145.0" style="-fx-background-color:#9e9e9e; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#616161; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="15\nEROS\n08:25 BPR" />
+        </children>
+    </HBox>
+
+    <!-- ======= Legenda ======= -->
+    <HBox alignment="CENTER_LEFT" layoutX="545.0" layoutY="980.0" spacing="26">
+        <children>
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <Rectangle arcHeight="6" arcWidth="6" height="14" style="-fx-fill:#2ecc71;" width="18" />
+                <Label style="-fx-text-fill:#ffffff; -fx-font-size:14;" text="Livre" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <Rectangle arcHeight="6" arcWidth="6" height="14" style="-fx-fill:#e74c3c;" width="18" />
+                <Label style="-fx-text-fill:#ffffff; -fx-font-size:14;" text="Locado" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <Rectangle arcHeight="6" arcWidth="6" height="14" style="-fx-fill:#9e9e9e;" width="18" />
+                <Label style="-fx-text-fill:#ffffff; -fx-font-size:14;" text="Manutenção" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <Rectangle arcHeight="6" arcWidth="6" height="14" style="-fx-fill:#1e90ff;" width="18" />
+                <Label style="-fx-text-fill:#ffffff; -fx-font-size:14;" text="Em limpeza" />
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="8">
+                <Rectangle arcHeight="6" arcWidth="6" height="14" style="-fx-fill:#f7c948;" width="18" />
+                <Label style="-fx-text-fill:#ffffff; -fx-font-size:14;" text="Sujo/Para limpeza" />
+            </HBox>
+        </children>
+    </HBox>
+   <HBox layoutX="182.0" layoutY="842.0" spacing="5.0">
+      <children>
+         <Button prefHeight="110.0" prefWidth="120.0" style="-fx-background-color:#f7c948; -fx-text-fill:#111; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#b58900; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="75\nALAC\n16:53 PQ" />
+         <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#f7c948; -fx-text-fill:#111; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#b58900; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="77\nALAC\n02 BR" />
+         <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#f7c948; -fx-text-fill:#111; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#b58900; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="79\nALAC\n11:52 BR" />
+         <Button prefHeight="110.0" prefWidth="85.0" style="-fx-background-color:#2ecc71; -fx-text-fill:black; -fx-font-weight:bold; -fx-background-radius:10; -fx-border-color:#1b5e20; -fx-border-radius:10; -fx-border-width:2; -fx-font-size:12;" text="81\nROMA\n18:02 PQ" />
+      </children>
+   </HBox>
+
+</AnchorPane>
